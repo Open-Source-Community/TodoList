@@ -21,6 +21,10 @@ class _ToDoState extends State<ToDo> {
   var formKey = GlobalKey<FormState>();
 
   var titlecontroller = TextEditingController();
+<<<<<<< HEAD
+=======
+  var discreptioncontroller = TextEditingController();
+>>>>>>> 167ec245d36338b5ecddcf1f4298f34b7e07356b
 
   var timecontroller = TextEditingController();
 
@@ -74,10 +78,32 @@ class _ToDoState extends State<ToDo> {
                               controller: titlecontroller,
                               type: TextInputType.text,
                               prefix: Icons.task,
+<<<<<<< HEAD
                               label: "Task To Do",
                               validator: (value) {
                                 if (value.isEmpty) {
                                   return "Please Enter your task";
+=======
+                              label: "Task Title",
+                              validator: (value) {
+                                if (value.isEmpty) {
+                                  return "Please Enter your task Title";
+                                } else {
+                                  return null;
+                                }
+                              }),
+                          SizedBox(
+                            height: 15,
+                          ),
+                          DefaultTextFeild(
+                              controller: discreptioncontroller,
+                              type: TextInputType.text,
+                              prefix: Icons.task,
+                              label: "Task description",
+                              validator: (value) {
+                                if (value.isEmpty) {
+                                  return "Please Enter your task description";
+>>>>>>> 167ec245d36338b5ecddcf1f4298f34b7e07356b
                                 } else {
                                   return null;
                                 }
